@@ -63,6 +63,7 @@ batch-input.tsv    →  batch-runner.sh  →  N × agent workers
                     (tracks progress)
 ```
 
+Each worker is a headless Claude process (`claude -p`) that receives the full `batch-prompt.md` as context. Workers produce:
 Each worker is a headless agent process (for example `claude -p`) that receives the full `batch-prompt.md` as context. Workers produce:
 - Report .md
 - PDF
