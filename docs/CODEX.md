@@ -17,9 +17,20 @@ Claude workflow.
 ## Install
 
 ```bash
+# Install Codex CLI (global)
+npm install -g @openai/codex
+
+# Alternative (no global install)
+npx @openai/codex
+
+# Project deps
 npm install
 npx playwright install chromium
 ```
+
+Codex download/source URLs:
+- npm package: https://www.npmjs.com/package/@openai/codex
+- GitHub repository: https://github.com/openai/codex
 
 ## Recommended Starting Prompts
 
@@ -58,6 +69,7 @@ layer.
 ## Verification
 
 ```bash
+codex --version
 npm run verify
 
 # optional dashboard build
