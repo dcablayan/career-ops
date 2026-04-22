@@ -56,7 +56,7 @@
 The batch system processes multiple offers in parallel:
 
 ```
-batch-input.tsv    →  batch-runner.sh  →  N × claude -p workers
+batch-input.tsv    →  batch-runner.sh  →  N × agent workers
 (id, url, source)     (orchestrator)       (self-contained prompt)
                            │
                     batch-state.tsv
@@ -64,6 +64,7 @@ batch-input.tsv    →  batch-runner.sh  →  N × claude -p workers
 ```
 
 Each worker is a headless Claude process (`claude -p`) that receives the full `batch-prompt.md` as context. Workers produce:
+Each worker is a headless agent process (for example `claude -p`) that receives the full `batch-prompt.md` as context. Workers produce:
 - Report .md
 - PDF
 - Tracker TSV line
