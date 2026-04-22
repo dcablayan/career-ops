@@ -2,7 +2,10 @@
 
 ## Prerequisites
 
-- [Claude Code](https://claude.ai/code) installed and configured
+- One supported coding agent installed and configured:
+  - [Claude Code](https://claude.ai/code)
+  - [OpenAI Codex CLI](https://developers.openai.com/codex/)
+  - [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 - Node.js 18+ (for PDF generation and utility scripts)
 - (Optional) Go 1.21+ (for the dashboard TUI)
 
@@ -44,11 +47,19 @@ Edit `portals.yml`:
 
 ### 5. Start using
 
-Open Claude Code in this directory:
+Open your preferred agent in this directory:
 
 ```bash
-claude
+claude   # Claude Code
+# or
+codex    # OpenAI Codex CLI
+# or
+gemini   # Gemini CLI
 ```
+
+Codex download/source URLs:
+- npm package: https://www.npmjs.com/package/@openai/codex
+- GitHub repository: https://github.com/openai/codex
 
 Then paste a job offer URL or description. Career-ops will automatically evaluate it, generate a report, create a tailored PDF, and track it.
 

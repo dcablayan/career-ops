@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/OpenCode-111827?style=flat&logo=terminal&logoColor=white" alt="OpenCode">
   <img src="https://img.shields.io/badge/Gemini_CLI-4285F4?style=flat&logo=google&logoColor=white" alt="Gemini CLI">
-  <img src="https://img.shields.io/badge/Codex_(soon)-6B7280?style=flat&logo=openai&logoColor=white" alt="Codex">
+  <img src="https://img.shields.io/badge/Codex-412991?style=flat&logo=openai&logoColor=white" alt="Codex">
   <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
   <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
   <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white" alt="Playwright">
@@ -56,7 +56,7 @@ Career-Ops turns any AI coding CLI into a full job search command center. Instea
 
 > **Important: This is NOT a spray-and-pray tool.** Career-ops is a filter -- it helps you find the few offers worth your time out of hundreds. The system strongly recommends against applying to anything scoring below 4.0/5. Your time is valuable, and so is the recruiter's. Always review before submitting.
 
-Career-ops is agentic: Claude Code navigates career pages with Playwright, evaluates fit by reasoning about your CV vs the job description (not keyword matching), and adapts your resume per listing.
+Career-ops is agentic: Claude Code, Codex, OpenCode, and Gemini CLI can navigate career pages with Playwright, evaluate fit by reasoning about your CV vs the job description (not keyword matching), and adapt your resume per listing.
 
 > **Heads up: the first evaluations won't be great.** The system doesn't know you yet. Feed it context -- your CV, your career story, your proof points, your preferences, what you're good at, what you want to avoid. The more you nurture it, the better it gets. Think of it as onboarding a new recruiter: the first week they need to learn about you, then they become invaluable.
 
@@ -95,10 +95,14 @@ cp templates/portals.example.yml portals.yml       # Customize companies
 # 4. Add your CV
 # Create cv.md in the project root with your CV in markdown
 
-# 5. Personalize with Claude
-claude   # Open Claude Code in this directory
+# 5. Personalize with your coding agent
+claude   # Claude Code
+# or
+codex    # OpenAI Codex CLI
+# or
+gemini   # Google Gemini CLI
 
-# Then ask Claude to adapt the system to you:
+# Then ask your agent to adapt the system to you:
 # "Change the archetypes to backend engineering roles"
 # "Translate the modes to English"
 # "Add these 5 companies to portals.yml"
@@ -108,7 +112,33 @@ claude   # Open Claude Code in this directory
 # Paste a job URL or run /career-ops
 ```
 
-> **The system is designed to be customized by Claude itself.** Modes, archetypes, scoring weights, negotiation scripts -- just ask Claude to change them. It reads the same files it uses, so it knows exactly what to edit.
+> **The system is designed to be customized by your coding agent.** Modes, archetypes, scoring weights, negotiation scripts -- ask Claude Code, Codex, OpenCode, or Gemini CLI to change them. Each agent reads the same files it uses, so it knows exactly what to edit.
+
+## Codex CLI Integration
+
+Career-ops supports Codex through `AGENTS.md`, using the same `modes/*.md` workflow and scripts as Claude Code and OpenCode.
+
+```bash
+# 1. Install Codex CLI
+npm install -g @openai/codex
+# Alternative: run without global install
+npx @openai/codex
+
+# 2. Run in the career-ops directory
+cd career-ops
+codex
+
+# 3. Use the same commands/prompts
+/career-ops
+/career-ops-scan
+/career-ops-pdf
+```
+
+Codex download/source URLs:
+- npm package: https://www.npmjs.com/package/@openai/codex
+- GitHub repo: https://github.com/openai/codex
+
+See [docs/CODEX.md](docs/CODEX.md) for Codex-specific setup and routing details.
 
 See [docs/SETUP.md](docs/SETUP.md) for the full setup guide.
 
