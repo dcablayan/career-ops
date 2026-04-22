@@ -57,6 +57,10 @@ codex    # OpenAI Codex CLI
 gemini   # Gemini CLI
 ```
 
+Codex download/source URLs:
+- npm package: https://www.npmjs.com/package/@openai/codex
+- GitHub repository: https://github.com/openai/codex
+
 Then paste a job offer URL or description. Career-ops will automatically evaluate it, generate a report, create a tailored PDF, and track it.
 
 ## Available Commands

@@ -121,6 +121,8 @@ Career-ops supports Codex through `AGENTS.md`, using the same `modes/*.md` workf
 ```bash
 # 1. Install Codex CLI
 npm install -g @openai/codex
+# Alternative: run without global install
+npx @openai/codex
 
 # 2. Run in the career-ops directory
 cd career-ops
@@ -131,6 +133,10 @@ codex
 /career-ops-scan
 /career-ops-pdf
 ```
+
+Codex download/source URLs:
+- npm package: https://www.npmjs.com/package/@openai/codex
+- GitHub repo: https://github.com/openai/codex
 
 See [docs/CODEX.md](docs/CODEX.md) for Codex-specific setup and routing details.
 
