@@ -132,6 +132,10 @@ codex
 "Evaluate this job URL with Career-Ops and run the full pipeline."
 "Scan my configured portals for new roles that match my profile."
 "Generate the tailored ATS PDF for this role using Career-Ops."
+# 3. Use the same commands/prompts
+/career-ops
+/career-ops-scan
+/career-ops-pdf
 ```
 
 Codex download/source URLs:
